@@ -18,7 +18,7 @@ script:
   - docker build -t $DOCKER_USERNAME/udagram-reverseproxy:v1 ./udagram-reverseproxy # build reverse proxy
   - docker build -t $DOCKER_USERNAME/udagram-api-user:v1 ./udagram-api-user         # build user api
   - docker build -t $DOCKER_USERNAME/udagram-api-feed:v1 ./udagram-api-feed         # build feed api
-  - docker build -t $DOCKER_USERNAME/udagram-frontend:v4 ./udagram-frontend         # build frontend
+  - docker build -t $DOCKER_USERNAME/udagram-frontend:v5 ./udagram-frontend         # build frontend
   - docker images   # check build result
 
 after_success:
@@ -26,5 +26,5 @@ after_success:
   - docker push $DOCKER_USERNAME/udagram-reverseproxy:v1 #push reverse proxy
   - docker push $DOCKER_USERNAME/udagram-api-user:v1     #push user api
   - docker push $DOCKER_USERNAME/udagram-api-feed:v1     #push feed api
-  - docker push $DOCKER_USERNAME/udagram-frontend:v4     #push frontend
+  - docker push $DOCKER_USERNAME/udagram-frontend:v5     #push frontend
   - docker logout # cleaup docker authentication
