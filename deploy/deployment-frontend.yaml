@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: faysale13/udagram-frontend:v1
+        image: faysale13/udagram-frontend:v9
         ports:
         - containerPort: 80
         resources:
